@@ -1,0 +1,10 @@
+stepDefinition\ShopProductCategory.class
+stepDefinition\SortByPopularity.class
+stepDefinition\Hooks.class
+stepDefinition\HomePagesliderCheck.class
+stepDefinition\TestContext.class
+stepDefinition\ShopSalefunctionality.class
+stepDefinition\FilterByPrice.class
+stepDefinition\ShopAddbasketView.class
+runner\TestRunner.class
+stepDefinition\ReadMoreFunctionality.class
