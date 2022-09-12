@@ -10,6 +10,7 @@ public class PageobjectManager {
 	SortByPopularityObj sortByPopularity;
 	ReadMoreFunctionality readMorefun;
 	ShopSaleFunctionality shopSalePro;
+	AddViewBasket addViewBasket;
 	
 	
 	
@@ -54,4 +55,11 @@ public class PageobjectManager {
 		return shopSalePro;
 		
 	}
+   public AddViewBasket getAddViewBasket() {
+	   addViewBasket = new AddViewBasket(driver);
+		return addViewBasket;
+		
+	}
+   
+   
 }

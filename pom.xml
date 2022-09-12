@@ -4,11 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>practiceAutomation</groupId>
-  <artifactId>practiceAutomat </artifactId>
+  <groupId>practiceAutomat</groupId>
+  <artifactId>practiceAutomat</artifactId>
   <version>0.0.1-SNAPSHOT</version>  <packaging>jar</packaging>
 
-  <name>practiceAutomation</name>
+  <name>practiceAutomat</name>
   <url>http://www.example.com</url>
 
   <properties>

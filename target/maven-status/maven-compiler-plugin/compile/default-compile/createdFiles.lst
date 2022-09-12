@@ -1,8 +1,7 @@
 pageObjects\ReadMoreFunctionality.class
 pageObjects\PageObjectSlidecheck.class
-.cucumber\cucumber.glue.tmp
 pageObjects\PageobjectManager.class
-.cucumber\cucumber.stepDefinitions.tmp
+pageObjects\AddViewBasket.class
 pageObjects\ShopSaleFunctionality.class
 pageObjects\ShopProductCategoryObj.class
 driverManger\DriverManager.class

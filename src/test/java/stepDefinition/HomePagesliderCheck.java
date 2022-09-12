@@ -26,12 +26,7 @@ public class HomePagesliderCheck {
 	       
 	    }
 
-	  //  @When("^Enter the URL (.*)$")
-	  //  public void enter_the_url_httppracticeautomationtestingin(String strUrl) throws Throwable {
-	   // 	slideCheck.addUrl(strUrl);
-	        
-	   // }
-
+	 
 	    @When("^Click on Shop Menu$")
 	    public void click_on_shop_menu() throws Throwable {
 	    	slideCheck.clickShop();

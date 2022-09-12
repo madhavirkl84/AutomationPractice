@@ -17,23 +17,14 @@ public class ReadMoreFunctionality {
 		this.driver= driver;
 	}
 	
-	public WebElement getHome() {
-		return driver.findElement(homeNav);
-	
-	}
-	
-	public WebElement getReadMore() {
-		return driver.findElement(readMore);
-	
-	}
 	public WebElement getOutOfStock() {
 		return driver.findElement(outOfStock);
-	
 	}
+		
 	public void checkOutofStock() {
 		
-		getHome().click();
-		getReadMore().click();
+		driver.findElement(homeNav).click();
+		driver.findElement(readMore).click();
 		assertTrue(getOutOfStock().getText().contains("Out of stock"));
 	}
 	public void productOutofStock() {
