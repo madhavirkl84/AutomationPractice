@@ -6,8 +6,8 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(features="src/test/java/feature", glue="stepDefinition", monochrome= true,
-tags="@AddCart",
-//@ShopSale or @FilterByPrice or @ReadMore or  @ShopProduct or @SortBy 
+
+//tags="@AddCart or @ShopSale or @FilterByPrice or @ReadMore or  @ShopProduct or @SortBy", 
  
 plugin= {"html:target/cucumber.html","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"} )
 
