@@ -17,7 +17,11 @@ public WebDriver getDriver() {
 	if (driver==null) {
 		
 		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver(new ChromeOptions());
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--disable-dev-shm-usage");
+		//disable-dev-shm-usage
+		driver = new ChromeDriver(options);
+		//driver = new ChromeDriver(new ChromeOptions());
 	}
 	return driver;
 }
