@@ -18,6 +18,7 @@ public WebDriver getDriver() {
 	
 	if (driver==null) {
 		
+		System.setProperty("DISPLAY", "localhost:0.0");
 		WebDriverManager.firefoxdriver().setup();
 		driver = new FirefoxDriver(new FirefoxOptions());
 		
