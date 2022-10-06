@@ -9,7 +9,8 @@ import io.cucumber.testng.CucumberOptions;
 
 //tags="@AddCart or @ShopSale or @FilterByPrice or @ReadMore or  @ShopProduct or @SortBy", 
  
-plugin= {"html:target/cucumber.html","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"} )
+//plugin= {"html:target/cucumber.html","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"} )
+plugin = { "pretty", "html:target/cucumber-reports" })		 
 
 
 public class TestRunner extends  AbstractTestNGCucumberTests { 
