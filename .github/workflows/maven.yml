@@ -3,8 +3,8 @@
 
 name: Java CI with Maven
 
-env:
-  DISPLAY: localhost:0.0
+# env:
+ #  DISPLAY: localhost:0.0
 on:
   push:
     branches: [ "main" ]
