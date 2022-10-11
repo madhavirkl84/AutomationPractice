@@ -18,7 +18,7 @@ public WebDriver getDriver() {
 	
 	if (driver==null) {
 		
-		System.setProperty("DISPLAY", "localhost:0.0");
+		//System.setProperty("DISPLAY", "localhost:0.0");
 		FirefoxOptions options = new FirefoxOptions();
 		options.addArguments("--headless");
 		WebDriverManager.firefoxdriver().setup();
