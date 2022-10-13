@@ -19,10 +19,13 @@ public WebDriver getDriver() {
 	if (driver==null) {
 		
 		System.setProperty("DISPLAY", "localhost:0.0");
-		FirefoxOptions options = new FirefoxOptions();
+		//FirefoxOptions options = new FirefoxOptions();
+		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--headless");
-		WebDriverManager.firefoxdriver().setup();
-		driver = new FirefoxDriver(options);
+		//WebDriverManager.firefoxdriver().setup();
+		WebDriverManager.chromedriver().setup();
+		//driver = new FirefoxDriver(options);
+		driver = new ChromeDriver(options);
 		
 		//WebDriverManager.chromedriver().setup();
 		//ChromeOptions options = new ChromeOptions();
