@@ -20,13 +20,10 @@ public WebDriver getDriver() {
 		
 		System.setProperty("DISPLAY", "localhost:0.0");
 		FirefoxOptions options = new FirefoxOptions();
-		//ChromeOptions options = new ChromeOptions();
 		options.addArguments("--headless");
 		WebDriverManager.firefoxdriver().setup();
-		//WebDriverManager.chromedriver().setup();
 		driver = new FirefoxDriver(options);
-		//driver = new ChromeDriver(options);
-		
+			
 		//WebDriverManager.chromedriver().setup();
 		//ChromeOptions options = new ChromeOptions();
 		//options.addArguments("--no-sandbox"); // Bypass OS security model, MUST BE THE VERY FIRST OPTION
