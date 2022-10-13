@@ -1,9 +1,9 @@
 package pageObjects;
 
 import static org.junit.Assert.assertTrue;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import java.time.Duration;
+//import org.openqa.selenium.support.ui.ExpectedConditions;
+//import org.openqa.selenium.support.ui.WebDriverWait;
+//import java.time.Duration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,8 +54,8 @@ public class PageObjectSlidecheck {
 	public void clickShop() throws InterruptedException {
 		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		Thread.sleep(500);
-		//driver.findElement(shoplink).click();
-		new WebDriverWait(driver, Duration.ofSeconds(40)).until(ExpectedConditions.elementToBeClickable(shoplink)).click();
+		driver.findElement(shoplink).click();
+		//new WebDriverWait(driver, Duration.ofSeconds(40)).until(ExpectedConditions.elementToBeClickable(shoplink)).click();
 		//assertTrue(getNav().getText().contains("Shop"));
 		
 	}
