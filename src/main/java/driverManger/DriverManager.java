@@ -18,17 +18,17 @@ public WebDriver getDriver() {
 	
 	if (driver==null) {
 		
-		//System.setProperty("DISPLAY", "localhost:0.0");
-		//FirefoxOptions options = new FirefoxOptions();
-		//options.addArguments("--headless");
-		//WebDriverManager.firefoxdriver().setup();
-		//driver = new FirefoxDriver(options);
-		
 		System.setProperty("DISPLAY", "localhost:0.0");
-		ChromeOptions options = new ChromeOptions();
+		FirefoxOptions options = new FirefoxOptions();
 		options.addArguments("--headless");
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver(options);
+		WebDriverManager.firefoxdriver().setup();
+		driver = new FirefoxDriver(options);
+		
+		//System.setProperty("DISPLAY", "localhost:0.0");
+		//ChromeOptions options = new ChromeOptions();
+		//options.addArguments("--headless");
+		//WebDriverManager.chromedriver().setup();
+		//driver = new ChromeDriver(options);
 		
 			
 		//WebDriverManager.chromedriver().setup();
