@@ -50,7 +50,7 @@ public class PageObjectSlidecheck {
 	
 	public void clickShop() throws InterruptedException {
 		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		Thread.sleep(500);
+		Thread.sleep(2000);
 		driver.findElement(shoplink).click();
 		//assertTrue(getNav().getText().contains("Shop"));
 		
