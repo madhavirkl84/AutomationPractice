@@ -56,7 +56,7 @@ public class PageObjectSlidecheck {
 		Thread.sleep(500);
 		driver.findElement(shoplink).click();
 		//new WebDriverWait(driver, Duration.ofSeconds(40)).until(ExpectedConditions.elementToBeClickable(shoplink)).click();
-		//assertTrue(getNav().getText().contains("Shop"));
+		//assertTrue(getNav().getText().contains("Shop")); 
 		
 	}
 	
