@@ -1,0 +1,19 @@
+name: demo of reusing a workflow
+
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  call-reusable-workflow-1:
+    uses: AutomationPractice/ .github/workflows/reuseme.yml@main
+    with:
+      name: madhavi
+      company: SoftwareAG
+     
+  call-reusable-workflow-2:
+    uses: AutomationPractice/ .github/workflows/reuseme.yml@main
+    with:
+      name: ggm
+      company: SoftwareAG Intern   
+
