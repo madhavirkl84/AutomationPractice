@@ -6,13 +6,13 @@ on:
 
 jobs:
   call-reusable-workflow-1:
-    uses: AutomationPractice/ .github/workflows/reuseme.yml@main
+    uses: AutomationPractice/.github/workflows/reuseme.yml@main
     with:
       name: madhavi
       company: SoftwareAG
      
   call-reusable-workflow-2:
-    uses: AutomationPractice/ .github/workflows/reuseme.yml@main
+    uses: AutomationPractice/.github/workflows/reuseme.yml@main
     with:
       name: ggm
       company: SoftwareAG Intern   
