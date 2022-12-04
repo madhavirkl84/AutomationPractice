@@ -1,0 +1,19 @@
+name: workflow to be called by other workflows
+
+on:
+  workflow_call:
+    inputs:
+      name:
+        type: string
+        required: true
+      company:
+        type: string
+        required: true
+        
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print name and company of the supplied user
+        run: echo Hi, this is ${{inputs.name}} and I work for ${{inputs.company}}
+  
