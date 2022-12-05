@@ -13,7 +13,7 @@ jobs:
       age: ${{ steps.step2.outputs.age }}
     steps:
     - id: step1
-      run: echo "name=madhavi" >> $GITHUB_OUTPUT
+      run: echo "name=notmadhavi" >> $GITHUB_OUTPUT
     - id: step2
       run: echo "age=123" >> $GITHUB_OUTPUT
   myjob2:
