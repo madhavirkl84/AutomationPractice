@@ -1,6 +1,6 @@
 on:
   workflow_run:
-    workflows: [workflowreusedemo]
+    workflows: [madhavirkl84/AutomationPractice/.github/workflows/workflowreusedemo]
     types: [completed]
 
 jobs:
