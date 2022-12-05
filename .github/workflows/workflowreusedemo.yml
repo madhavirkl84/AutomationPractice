@@ -5,6 +5,23 @@ on:
   workflow_dispatch:
 
 jobs:
+  myjob1:
+    runs-on: ubuntu-latest
+    # Map a step output to a job output
+    outputs:
+      output1: ${{ steps.step1.outputs.test }}
+      output2: ${{ steps.step2.outputs.test }}
+    steps:
+    - id: step1
+      run: echo "test=hello" >> $GITHUB_OUTPUT
+    - id: step2
+      run: echo "test=world" >> $GITHUB_OUTPUT
+  myjob2:
+    runs-on: ubuntu-latest
+    needs: myjob1
+    steps:
+    - run: echo ${{needs.myjob1.outputs.output1}} ${{needs.job1.outputs.output2}}
+
   call-reusable-workflow-1:
     uses: madhavirkl84/AutomationPractice/.github/workflows/reuseme.yml@main
     with:
@@ -16,5 +33,7 @@ jobs:
     uses: madhavirkl84/AutomationPractice/.github/workflows/reuseme.yml@main
     with:
       name: ggm
-      company: SoftwareAG Intern   
+      company: SoftwareAG Intern
+      
+      
 
