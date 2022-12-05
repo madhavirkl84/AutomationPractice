@@ -12,6 +12,7 @@ jobs:
       company: SoftwareAG
      
   call-reusable-workflow-2:
+    needs: [call-reusable-workflow-1]
     uses: madhavirkl84/AutomationPractice/.github/workflows/reuseme.yml@main
     with:
       name: ggm
