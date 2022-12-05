@@ -1,5 +1,6 @@
 name: my workflow test
 on:
+  workflow_dispatch:
   workflow_run:
     workflows: [demo of reusing a workflow]
     types: [completed]
