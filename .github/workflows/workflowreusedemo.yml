@@ -9,18 +9,19 @@ jobs:
     runs-on: ubuntu-latest
     # Map a step output to a job output
     outputs:
-      output1: ${{ steps.step1.outputs.test }}
-      output2: ${{ steps.step2.outputs.test }}
+      name: ${{ steps.step1.outputs.name }}
+      age: ${{ steps.step2.outputs.age }}
     steps:
     - id: step1
-      run: echo "test=hello" >> $GITHUB_OUTPUT
+      run: echo "name=madhavi" >> $GITHUB_OUTPUT
     - id: step2
-      run: echo "test=world" >> $GITHUB_OUTPUT
+      run: echo "age=123" >> $GITHUB_OUTPUT
   myjob2:
     runs-on: ubuntu-latest
     needs: myjob1
+    if: needs.myjob1.outputs.name == 'madhavi'
     steps:
-    - run: echo ${{needs.myjob1.outputs.output1}} ${{needs.myjob1.outputs.output2}}
+    - run: echo ${{needs.myjob1.outputs.name}} ${{needs.myjob1.outputs.age}}
 
   call-reusable-workflow-1:
     uses: madhavirkl84/AutomationPractice/.github/workflows/reuseme.yml@main
@@ -35,5 +36,3 @@ jobs:
       name: ggm
       company: SoftwareAG Intern
       
-      
-
