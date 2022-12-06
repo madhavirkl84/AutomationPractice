@@ -10,8 +10,12 @@ jobs:
   job4:
     runs-on: ubuntu-latest
     needs: job3
+    name: testing secret
     steps:
-      - run: echo ${{ needs.job3.outputs.firstword }} ${{ needs.job3.outputs.secondword }}
+         - run: echo ${{needs.job3.outputs.firstword}} ${{needs.job3.outputs.secondword}}
+         - run: echo "$QM"
+    env:
+      QM : ${{secret.SECRET_TOKEN}}
       
   myjob1:
     runs-on: ubuntu-latest
