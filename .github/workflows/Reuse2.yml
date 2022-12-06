@@ -17,10 +17,10 @@ jobs:
     runs-on: ubuntu-latest
     # Map the job outputs to step outputs
     outputs:
-      output1: ${{ steps.step1.outputs.firstword }}
-      output2: ${{ steps.step2.outputs.secondword }}
+      output1: ${{ steps.step1.outputs.firstname }}
+      output2: ${{ steps.step2.outputs.lastname }}
     steps:
       - id: step1
-        run: echo "::set-output name=firstword::hello"
+        run: echo "::set-output name=firstname::Swati"
       - id: step2
-        run: echo "::set-output name=secondword::world"
+        run: echo "::set-output name=lastname::Gupta"
