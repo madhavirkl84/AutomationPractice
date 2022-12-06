@@ -15,7 +15,7 @@ jobs:
          - run: echo ${{needs.job3.outputs.firstword}} ${{needs.job3.outputs.secondword}}
          - run: echo "$QM"
     env:
-      QM : ${{secret.SECRET_TOKEN}}
+      QM : ${{secrets.SECRET_TOKEN}}
       
   myjob1:
     runs-on: ubuntu-latest
