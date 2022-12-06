@@ -5,6 +5,14 @@ on:
   workflow_dispatch:
 
 jobs:
+  job3:
+    uses: madhavirkl84/AutomationPractice/.github/workflows/Reuse2.yml@main
+  job4:
+    runs-on: ubuntu-latest
+    needs: job3
+    steps:
+      - run: echo ${{ needs.job3.outputs.firstword }} ${{ needs.job3.outputs.secondword }}
+      
   myjob1:
     runs-on: ubuntu-latest
     # Map a step output to a job output
