@@ -59,6 +59,7 @@ jobs:
       
   # Uses Reuse2.yml      
   job3:
+    runs-on: ubuntu-latest
     uses: madhavirkl84/AutomationPractice/.github/workflows/Reuse2.yml@main
       steps:
       - run: echo ${{needs.job3.outputs.firstword}} ${{needs.job3.outputs.secondword}}
