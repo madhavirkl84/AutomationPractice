@@ -32,9 +32,9 @@ jobs:
       age: ${{ steps.step2.outputs.age }}
     steps:
     - id: step1
-      run: echo "${{inputs.name}}" >> $GITHUB_OUTPUT
+      run: echo "name=${{inputs.name}}" >> $GITHUB_OUTPUT
     - id: step2
-      run: echo "${{inputs.age}}" >> $GITHUB_OUTPUT
+      run: echo "age=${{inputs.age}}" >> $GITHUB_OUTPUT
   myjob2:
     runs-on: ubuntu-latest
     needs: myjob1
