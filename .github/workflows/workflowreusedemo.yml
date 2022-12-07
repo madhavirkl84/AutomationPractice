@@ -46,7 +46,7 @@ jobs:
     needs: myjob2
     if: needs.myjob2.result == 'success'
     steps:
-      - run: echo Task done ${{needs.myjob1.outputs.name}} 
+      - run: echo Task done
       - name: Set the value
         id: step_one
       - run: |
