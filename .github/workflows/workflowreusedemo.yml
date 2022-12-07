@@ -31,13 +31,15 @@ jobs:
     - id: step3
       run: echo "company=${{inputs.company}}" >> $GITHUB_OUTPUT
   myjob2:
+    name: Is it Madhavi
     runs-on: ubuntu-latest
     needs: myjob1
     if: needs.myjob1.outputs.name == 'madhavi'
     steps:
     - run: echo ${{needs.myjob1.outputs.name}} ${{needs.myjob1.outputs.age}}
   
-  myjob3:
+  myjob3: 
+    name: Not Madhavi so skippped
     runs-on: ubuntu-latest
     needs: myjob2
     if: needs.myjob2.result == 'skipped'
@@ -46,12 +48,14 @@ jobs:
     
  # Uses reuseme.yml       
   call-reusable-workflow-1:
+    name: Reuseme called for M 
     uses: madhavirkl84/AutomationPractice/.github/workflows/reuseme.yml@main
     with:
       name: Madhavi
       company: Software AG
      
   call-reusable-workflow-2:
+    name: Reuseme called for GM 
     needs: [call-reusable-workflow-1]
     uses: madhavirkl84/AutomationPractice/.github/workflows/reuseme.yml@main
     with:
@@ -59,16 +63,16 @@ jobs:
       company: SoftwareAG Intern
       
   # Uses Reuse2.yml      
-  IfNameSwati:
-     uses: madhavirkl84/AutomationPractice/.github/workflows/Reuse2.yml@main
-     needs: myjob1 
+  job3:
+    uses: madhavirkl84/AutomationPractice/.github/workflows/Reuse2.yml@main
+        needs:myjob1 
     # if: needs.myjob1.outputs.name == 'Swati'
      # echo Hi Swati!!
   job4:
     runs-on: ubuntu-latest
-    needs: IfNameSwati
+    needs: job3
     steps:
-        - run: echo ${{needs.IfNameSwati.outputs.firstword}} ${{needs.IfNameSwati.outputs.secondword}}
+        - run: echo ${{needs.job3.outputs.firstword}} ${{needs.job3.outputs.secondword}}
         - run: echo "$QM"
     env:
       QM : ${{secrets.SECRET_TOKEN}}     
