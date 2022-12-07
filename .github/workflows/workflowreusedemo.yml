@@ -41,7 +41,7 @@ jobs:
   myjob3: 
     name: If Madhavi skip this
     runs-on: ubuntu-latest
-    needs: [myjob2]
+    needs: myjob2
     if: |
        always() && needs.myjob2.result=='skipped'
     steps:
@@ -66,6 +66,7 @@ jobs:
       
   # Uses Reuse2.yml      
   job3:
+    name: Reuse2
     uses: madhavirkl84/AutomationPractice/.github/workflows/Reuse2.yml@main
     needs: myjob1 
     # if: needs.myjob1.outputs.name == 'Swati'
