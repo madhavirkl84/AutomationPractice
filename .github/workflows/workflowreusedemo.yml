@@ -31,7 +31,7 @@ jobs:
     - id: step3
       run: echo "company=${{inputs.company}}" >> $GITHUB_OUTPUT
   myjob2:
-    name: Is it Madhavi
+    # name: Is it Madhavi
     runs-on: ubuntu-latest
     needs: myjob1
     if: needs.myjob1.outputs.name == 'madhavi'
