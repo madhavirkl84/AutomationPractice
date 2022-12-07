@@ -41,20 +41,6 @@ jobs:
     if: needs.myjob2.result == 'skipped'
     steps:
       - run: echo myjob2 is skipped 
-  myjob4:
-    runs-on: ubuntu-latest
-    needs: myjob2
-    if: needs.myjob2.result == 'success'
-    steps:
-      - run: echo Task done
-      - name: Set the value
-        id: step_one
-      - run: |
-          echo "color=yellow" >> $GITHUB_ENV
-      - name: Use the value
-        id: step_two
-        run: |
-          echo "${{ env.color }}" # This will output 'yellow'
           
   call-reusable-workflow-1:
     uses: madhavirkl84/AutomationPractice/.github/workflows/reuseme.yml@main
