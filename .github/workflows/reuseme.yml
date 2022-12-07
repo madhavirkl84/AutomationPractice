@@ -2,6 +2,13 @@ name: workflow to be called by other workflows
 
 on:
   workflow_dispatch:
+   inputs:
+      name:
+        type: string
+        required: true
+      company:
+        type: string
+        required: true
   workflow_call:
     inputs:
       name:
