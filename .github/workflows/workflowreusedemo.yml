@@ -47,7 +47,7 @@ jobs:
     needs: myjob2
     if: needs.myjob2.result == 'skipped'
     steps:
-      - run: echo myjob2 is skipped 
+    - run: echo myjob2 is skipped 
     
           
   call-reusable-workflow-1:
