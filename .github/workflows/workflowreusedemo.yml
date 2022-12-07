@@ -16,6 +16,7 @@ on:
 
 jobs:
   myjob1:
+    name: Input Details
     runs-on: ubuntu-latest
     # Map a step output to a job output
     outputs:
