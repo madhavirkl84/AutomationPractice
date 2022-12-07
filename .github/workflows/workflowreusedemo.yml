@@ -41,8 +41,9 @@ jobs:
   myjob3: 
     name: If Madhavi skip this
     runs-on: ubuntu-latest
-    if: ${{ always() }}
-    needs: myjob2
+    needs: [myjob2]
+    if: |
+       always() needs.myjob2.result=='skipped'
     steps:
     - run: echo myjob2 is skipped 
     
