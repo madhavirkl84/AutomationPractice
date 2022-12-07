@@ -48,15 +48,16 @@ jobs:
     
  # Uses reuseme.yml       
   call-reusable-workflow-1:
-    name: Reuseme called for M 
+    name: Reuseme called M
+    needs: myjob2
     uses: madhavirkl84/AutomationPractice/.github/workflows/reuseme.yml@main
     with:
       name: Madhavi
       company: Software AG
      
   call-reusable-workflow-2:
-    name: Reuseme called for GM 
-    needs: [call-reusable-workflow-1]
+    name: Reuseme called GM 
+    needs: job3
     uses: madhavirkl84/AutomationPractice/.github/workflows/reuseme.yml@main
     with:
       name: ggm
