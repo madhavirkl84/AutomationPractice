@@ -39,7 +39,7 @@ jobs:
     - run: echo ${{needs.myjob1.outputs.name}} ${{needs.myjob1.outputs.age}}
   
   myjob3: 
-    name: Not Madhavi so skippped
+    name: If Madhavi skip this
     runs-on: ubuntu-latest
     needs: myjob2
     if: needs.myjob2.result == 'skipped'
