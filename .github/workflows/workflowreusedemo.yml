@@ -60,13 +60,12 @@ jobs:
   # Uses Reuse2.yml      
   IfNameSwati:
      uses: madhavirkl84/AutomationPractice/.github/workflows/Reuse2.yml@main
-    # needs: myjob1 
+     needs: myjob1 
     # if: needs.myjob1.outputs.name == 'Swati'
      # echo Hi Swati!!
   job4:
     runs-on: ubuntu-latest
     needs: IfNameSwati
-    name: testing secret
     steps:
         - run: echo ${{needs.IfNameSwati.outputs.firstword}} ${{needs.IfNameSwati.outputs.secondword}}
         - run: echo "$QM"
