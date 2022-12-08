@@ -68,12 +68,10 @@ jobs:
   job3:
     name: Reuse2
     needs: myjob1 
-    if: needs.myjob1.outputs.name == 'Swati'
-      echo Hi Swati
+   # if: needs.myjob1.outputs.name == 'Swati'
+    #  echo "Hi Swati"
     uses: madhavirkl84/AutomationPractice/.github/workflows/Reuse2.yml@main
    
-    
-      
   job4:
     runs-on: ubuntu-latest
     needs: job3
